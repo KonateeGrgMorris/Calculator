@@ -12,13 +12,13 @@
     <div class="Calculator">
         <form>
             <div class="display">
-                <input type="text" name="display">
+                <input type="text" id="display" />
             </div>
             <div>
-                <input type="button" value="AC" onclick="display.value = '' " class="operator">
-                <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)" class="operator">
-                <input type="button" value="." onclick="display.value += '.' " class="operator">
-                <input type="button" value="/" onclick="display.value += '/' " class="operator">
+                <input type="button" value="AC" onclick="display.value = '' ">
+                <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)">
+                <input type="button" value="." onclick="display.value += '.' ">
+                <input type="button" value="/" onclick="display.value += '/' ">
             </div>
             <div>
                 <input type="button" value="7" onclick="display.value += '7' ">
@@ -33,7 +33,7 @@
                 <input type="button" value="-" onclick="display.value += '-' ">
             </div>
             <div>
-                <input type="button" value="1" onclick="display.value += '1' ">
+                <input type="button" value="1" onclick="buttonClick(e)">
                 <input type="button" value="2" onclick="display.value += '2' ">
                 <input type="button" value="3" onclick="display.value += '3' ">
                 <input type="button" value="+" onclick="display.value += '+' ">
@@ -41,7 +41,7 @@
             <div>
                 <input type="button" value="00" onclick="display.value += '00' ">
                 <input type="button" value="0" onclick="display.value += '0' ">>
-                <input type="button" value="=" onclick="display.value = eval(display.value)" class="equal">
+                <input type="button" value="=" onclick="display.value = (display.value)" class="equal">
                 
             </div>
             </div>
