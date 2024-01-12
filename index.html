@@ -33,7 +33,7 @@
                 <input type="button" value="-" onclick="display.value += '-' ">
             </div>
             <div>
-                <input type="button" value="1" onclick="buttonClick(e)">
+                <input type="button" value="1" onclick="display.value += '2' ">
                 <input type="button" value="2" onclick="display.value += '2' ">
                 <input type="button" value="3" onclick="display.value += '3' ">
                 <input type="button" value="+" onclick="display.value += '+' ">
@@ -41,11 +41,14 @@
             <div>
                 <input type="button" value="00" onclick="display.value += '00' ">
                 <input type="button" value="0" onclick="display.value += '0' ">>
-                <input type="button" value="=" onclick="display.value = (display.value)" class="equal">
+                <input type="button" value="=" onclick="display.value = eval(display.value)" class="equal">
                 
             </div>
             </div>
         </form>
     </div>
+    <script src="script.js">
+
+    </script>
 </body>
 </html>

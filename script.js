@@ -8,21 +8,26 @@ const numArray = []
 const secondNumarray = []
 
 const display = document.getElementById('display')
-
-function getNumber(num){
-    if(step === 0 || step === 1){
-        numArray.push(num)
-        step = 1
-        firstNummber = Number (numArray.join('')) 
-        display.value = firstNumber
-    } else if (step === 2){
-        secondNumAray.push(num)
-        secondNumber = Number(secondNumArray.join(''))
-        display.value = secondNumber
-    }
+console.log(display)
+function getNumber(event){
+    console.log(event.target.getAttribute("value"))
+    const num = event.target.getAttribute("value")
+    console.log(display.value)
+    display.value = num
+    // if(step === 0 || step === 1){
+    //     numArray.string(num)
+    //     step = 1
+    //     firstNummber = Number (numArray.join('')) 
+    //     display.value = firstNumber
+    // } else if (step === 2){
+    //     secondNumAray.push(num)
+    //     secondNumber = Number(secondNumArray.join(''))
+    //     display.value = secondNumber
+    // }
 }
 
-function getOperator(op){
+function getOperator(event){
+    
     step = 2
     operation = op
 }
@@ -52,26 +57,4 @@ const calculateEquals = () =>{
         result = firstNumber / secondNumber
         display.value = result
     }
-}
-
-let num1 = '559'
-let num2 = '232'
-let operator1 = '+'
-let total = ''
-
-
-if(e.target.type === 'number'){
-  // 5
-  let value = e.target.value
-  
-  if(operator === ''){
-    num1 += value
-    display.innerText = num1
-  }else{
-    num2 += value
-    display.innerText = num2
-  }
-}else if(e.target.type === 'operator'){
-  let value = e.target.value
-  operator = value
 }
